@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Literature</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        h3 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin: 0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        h3:hover {
+            background-color: #388E3C;
+        }
+
+        h3::after {
+            content: '\25BC';
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        h3.open::after {
+            transform: rotate(180deg);
+        }
+
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+
+        .content.open {
+            max-height: 1000px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #777;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+                padding: 10px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section h3');
+            sections.forEach(section => {
+                section.addEventListener('click', () => {
+                    const content = section.nextElementSibling;
+                    const isOpen = content.classList.contains('open');
+
+                    sections.forEach(sec => {
+                        sec.classList.remove('open');
+                        sec.nextElementSibling.classList.remove('open');
+                    });
+
+                    if (!isOpen) {
+                        section.classList.add('open');
+                        content.classList.add('open');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Vedic Literature</h1>
+
+        <div class="section">
+            <h3>Classifications of Vedic Literature</h3>
+            <div class="content">
+                <p>Vedic literature is classified into two categories: <span>Shruti</span> and <span>Smriti</span>. Let’s discuss each in detail:</p>
+                <ul>
+                    <li><span>Shruti:</span> Sacred texts comprising Vedas, Brahmanas, Aranyakas, and Upanishads. Passed through oral traditions, these texts contain eternal knowledge.</li>
+                    <li><span>Smriti:</span> Texts based on memory and written by post-Vedic sages. Includes Itihasas, Puranas, Vedangas, and other classical Sanskrit literature.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Features of Vedic Literature</h3>
+            <div class="content">
+                <ul>
+                    <li>Divided into two timelines: Older Vedic and Later Vedic.</li>
+                    <li>Fields formed include philosophy, algebra, ethics, astronomy, and more.</li>
+                    <li>Emphasizes meditation, the cycle of birth and death, and values like mercy, self-control, and karma.</li>
+                    <li>Prominent women include Ghosha, Sulabha, Maitreyi, Lopamudra, and Gargi.</li>
+                    <li>Allied literature includes Vedangas, Darshanas, Sutras, and Upavedas.</li>
+                    <li>Mentions environmental awareness and preservation for all living beings.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Vedic Shruti Literature</h3>
+            <div class="content">
+                <h4>Brahmanas</h4>
+                <p>Prose works explaining Vedic hymns, sacrifices, and rites. Examples include Aitareya and Kausitaki Brahmanas.</p>
+                <h4>Aranyakas</h4>
+                <p>Known as “forest books,” intended for hermits. Discuss symbolism, mysticism, and provide a bridge to Upanishads.</p>
+                <h4>Upanishads</h4>
+                <p>Philosophical texts also known as Vedanta, focusing on intellectual and spiritual learning. The motto <i>Satyameva Jayate</i> is derived from the Mundakopanishad.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Vedic Smriti Literature</h3>
+            <div class="content">
+                <ul>
+                    <li><span>Vedangas:</span> Six limbs of the Vedas—Siksha (pronunciation), Kalpa (rituals), Vyakarana (grammar), Nirukta (etymology), Chhanda (meter), and Jyotisa (astrophysics).</li>
+                    <li><span>Shatdarsana:</span> Six schools of philosophy—Nyaya, Vaisheshika, Sankhya, Yoga, Purva Mimamsa, and Uttar Mimamsa.</li>
+                    <li><span>Puranas:</span> Ancient texts dealing with mythology, history, and moral teachings.</li>
+                    <li><span>Itihasas:</span> Epic tales like the Ramayana and Mahabharata.</li>
+                    <li><span>Tantras:</span> Literature focusing on worship through Agamas, Nigamas, and Samhitas.</li>
+                    <li><span>Agamas:</span> Instructional guides for worship, covering knowledge, rituals, and theology.</li>
+                    <li><span>Upavedas:</span> Applied knowledge texts, including Ayurveda (medicine), Dhanurveda (warfare), Gandharvaveda (music), and Silpaveda (art and architecture).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2024 Vedic Literature Portal
+        </div>
+    </div>
+</body>
+</html>
